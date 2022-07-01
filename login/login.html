@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="split left">
+          <div class="left1">
+            <h1>Sign-up</h1>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" />
+            <br />
+            <label for="college">College/School</label>
+            <input type="text" id="college" />
+            <br />
+            <label for="uid">Unique-id</label>
+            <input type="text" id="uid" />
+            <br />
+            <label for="pass1">Password</label>
+            <input type="password" id="pass1" type="password" />
+            <br />
+            <label for="pass2">Confirm Password</label>
+            <input type="password" id="pass2" type="password" />
+            <br />
+            <label for="role">Role</label><br />
+            <select name="role" id="role">
+              <option value=""></option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+            </select>
+            <br /><br />
+            <button type="button" onclick="create()">get-acc</button>
+            <button type="button" onclick="javascript:history.back()">
+              Back To Home
+            </button>
+          </div>
+        </div>
+      </form>
+      <div>
+        <div class="split right">
+          <div class="right1">
+            <h1>Log-in</h1>
+            <label for="userid">Unique-id</label>
+            <input type="text" id="userid" />
+            <br />
+            <label for="pass">Password</label>
+            <input type="password" id="pass" />
+            <br />
+            <button onclick="login()">get-in</button>
+            <button type="button" onclick="javascript:history.back()">
+              Back To Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

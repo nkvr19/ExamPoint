@@ -1,0 +1,49 @@
+.split
+{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.left
+{
+    left:0;
+    background-color: rgb(245, 238, 32);
+}
+.right
+{
+    right: 0;  
+}
+.left1
+{
+    margin-top: 20%;
+    align-items: center;
+    margin-left: 25%;
+}
+.left1 input{
+    display: block;
+    width: 80%;
+    height: 20px;
+}
+.right1
+{
+    margin-top: 20%;
+    align-items: center;
+    margin-left: 25%;
+}
+.right1 input
+{
+    height: 20px;
+    width: 80%;
+    display: block;
+}
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+}
