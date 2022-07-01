@@ -147,10 +147,50 @@ function vpass(pass1, pass2) {
   }
 }
 // Role Validation to be added
-
 function login() {
   var userid = document.getElementById('userid').value;
   var password = document.getElementById('pass').value;
-
-  console.log(userid, password);
+  var role = document.getElementById('urole').value;
+  if (uuid(userid)) {
+    if (upassw(password)) {
+      if (urole(role)) {
+        const user = {
+          userid: userid,
+          password: password,
+        };
+        console.log(user);
+        axios({
+          method: 'post',
+          url: 'http://localhost:3000/login',
+          data: user,
+        })
+          .then(res => console.log(res))
+          .catch(err => console.log(err));
+      }
+    }
+  }
+}
+function uuid(userid) {
+  if (userid === '') {
+    alert('Please enter your UniqueID..');
+    document.getElementById('userid').style.border = '2.5px solid red';
+  } else {
+    document.getElementById('userid').style.border = null;
+    return true;
+  }
+}
+function upassw(password) {
+  if (password === '') {
+    alert('Please Enter your Password..');
+    document.getElementById('pass').style.border = '2.5px solid red';
+  } else {
+    document.getElementById('pass').style.border = null;
+    return true;
+  }
+}
+function urole(role) {
+  if (role === '') {
+    alert('Please select your Role');
+    document.getElementById('urole').style.border = '2.5px solid red;';
+  }
 }

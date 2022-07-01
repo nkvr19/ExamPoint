@@ -39,6 +39,8 @@ app.post('/addstudent', async (req, res) => {
     res.status(400).send(e);
   }
 });
+app.post('/login', async(req, res));
+
 app.listen(3000, () => {
   console.log('Server Started');
 });
